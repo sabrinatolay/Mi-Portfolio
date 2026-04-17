@@ -3,305 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sabrina Tolay — Desarrolladora Full Stack buscando su primera experiencia laboral en una empresa de tecnología." />
-  <title>Sabrina Tolay | Desarrolladora Full Stack</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Sabrina Tolay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylehome.css">
 </head>
 <body>
 
-  <!-- ========== NAVEGACIÓN ========== -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-logo">
-        <span class="logo-nombre"><a href="#hero">Sabrina Tolay</a></span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
-    </nav>
-  </header>
+  <!-- Círculos decorativos -->
+  <div class="circulo circulo-1"></div>
+  <div class="circulo circulo-2"></div>
+  <div class="circulo circulo-3"></div>
+  <div class="circulo circulo-4"></div>
 
-  <main>
+  <main class="splash">
 
-    <!-- ========== HERO ========== -->
-    <section id="hero" class="hero">
-      <div class="hero-contenido">
+    <div class="deco-top">
+      <span class="deco-linea">Portfolio · 2025</span>
+    </div>
 
-        <div class="hero-texto">
-          <p class="hero-saludo">¡Hola! Soy</p>
-          <h1 class="hero-nombre">Sabrina Tolay</h1>
-          <h2 class="hero-titulo">Desarrolladora Full Stack</h2>
-          <p class="hero-descripcion">
-            Egresada de la Tecnicatura Universitaria en Desarrollo Web.
-            Me esforcé mucho para llegar hasta acá y ahora busco la oportunidad
-            de demostrarlo dentro de un equipo que apueste por el talento nuevo.
-            Estoy abierta a posiciones junior, bootcamps y proyectos de práctica.
-          </p>
-          <div class="hero-botones">
-            <a href="#proyectos" class="btn btn-primario">Ver mis proyectos</a>
-            <a href="CV_SabrinaTolay.pdf" class="btn btn-secundario" target="_blank" download>Descargar CV</a>
-          </div>
-        </div>
+    <h1 class="nombre" data-text="Sabrina Tolay">
+      Sabrina <span class="acento">Tolay</span>
+    </h1>
 
-        <div class="hero-foto">
-          <!-- Reemplazá "foto.jpg" con tu imagen real -->
-          <img src="img/foto.jpeg" alt="Foto de Sabrina Tolay" />
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========== SOBRE MÍ ========== -->
-    <section id="sobre-mi" class="seccion sobre-mi">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Sobre mí</h2>
-        <div class="sobre-mi-texto">
-          <p>
-            Soy Sabrina Tolay, desarrolladora Full Stack recién egresada de la
-            Tecnicatura Universitaria en Desarrollo Web. Durante mi carrera trabajé
-            con tecnologías como PHP, Python, Java, CodeIgniter y MySQL, desarrollando
-            aplicaciones web completas desde el diseño de la base de datos hasta
-            la interfaz de usuario.
-          </p>
-          <p>
-            Soy muy lógica, lo que me permite ir desde el detalle más pequeño para
-            entender por qué falla lo más grande. No me quedo tranquila hasta que
-            todo funciona correctamente — si hay un problema, sigo pensando hasta
-            encontrarlo. Cada bug resuelto no es solo una corrección: es experiencia
-            acumulada y la satisfacción de haber contribuido con algo real.
-          </p>
-          <p>
-            Me interesa especialmente la experiencia del usuario: me gusta detectar
-            qué falla en una interfaz y mejorarlo para que tanto el trabajador que
-            usa una app internamente como el usuario final tengan exactamente lo que
-            necesitan. Busco una empresa donde pueda aportar esa mirada, crecer dentro
-            de un equipo y ser parte de cambios que se noten.
-          </p>
-          <a href="CV_SabrinaTolay.pdf" class="btn btn-primario" target="_blank" download>
-            Descargar CV
-          </a>
-        </div>
-      </div>
-    </section>
-
-        <!-- ========== HABILIDADES ========== -->
-    <section id="habilidades" class="seccion habilidades">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Habilidades</h2>
-
-        <div class="habilidades-categorias">
-
-          <div class="categoria">
-            <h3 class="categoria-titulo">Frontend</h3>
-            <ul class="skills-lista">
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
-                <span>HTML5</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
-                <span>CSS3</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-                <span>JavaScript</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
-                <span>Bootstrap</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="categoria">
-            <h3 class="categoria-titulo">Backend</h3>
-            <ul class="skills-lista">
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
-                <span>PHP</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-                <span>Python</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
-                <span>Java</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter" />
-                <span>CodeIgniter</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="categoria">
-            <h3 class="categoria-titulo">Base de Datos y Herramientas</h3>
-            <ul class="skills-lista">
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-                <span>MySQL</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-                <span>GitHub</span>
-              </li>
-              <li class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" />
-                <span>Canva</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PROYECTOS ========== -->
-    <section id="proyectos" class="seccion proyectos">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Proyectos</h2>
-        <p class="seccion-subtitulo">
-          Estos son algunos de los proyectos que desarrollé durante mi carrera.
-          Cada uno representó un desafío distinto y una oportunidad concreta de aprender.
-        </p>
-
-        <div class="proyectos-grid">
-
-          <!-- PROYECTO 1 — completar con datos reales -->
-          <article class="proyecto-card">
-            <div class="proyecto-imagen">
-              <img src="img/Dg.png" alt="Captura del Proyecto 1" />
-            </div>
-            <div class="proyecto-info">
-              <h3 class="proyecto-nombre">DG contrucciones y soluciones</h3>
-              <p class="proyecto-descripcion">
-                DG es un sistema para un Maestro Mayor de Obras, que permite
-                 administrar solicitudes de trabajo, publicar trabajos realizados , gestionar equipos para 
-                 obras y recibir calificaciones de clientes.
-                Incluye una sección pública para que usuarios visualicen trabajos y envíen solicitudes.
-                Este proyecto resuelve la necesidad de centralizar la gestión de trabajos y la comunicación entre el 
-                profesional, clientes y trabajadores.
-              </p>
-              <ul class="proyecto-tecnologias">
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>Bootstrap</li>
-              </ul>
-              <div class="proyecto-links">
-                <a href="https://github.com/sabrinatolay/nombre-repo" target="_blank" class="btn btn-secundario">
-                  Ver código en GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROYECTO 2 -->
-          <article class="proyecto-card">
-            <div class="proyecto-imagen">
-              <img src="img/TareasApp.png" alt="Captura del Proyecto 2" />
-            </div>
-            <div class="proyecto-info">
-              <h3 class="proyecto-nombre">Tareasapp_PHP-Collaborator</h3>
-              <p class="proyecto-descripcion">
-                PHP Collaborator es una plataforma para gestión de tareas y colaboradores en proyectos PHP usando
-                 modelo MVC en CodeIgniter 4. Donde se permite asignar subtareas automáticamente a colaboradores 
-                 disponibles,confiando en su competencia.
-              </p>
-              <ul class="proyecto-tecnologias">
-                <li>CodeIgniter</li>
-                <li>MySQL</li>
-                <li>JavaScript</li>
-              </ul>
-              <div class="proyecto-links">
-                <a href="https://github.com/Sabry2493/Tareasapp_PHP-Collaborator" target="_blank" class="btn btn-secundario">
-                  Ver código en GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROYECTO 3 -->
-          <article class="proyecto-card">
-            <div class="proyecto-imagen">
-              <img src="img/Happyfeet.png" alt="Captura del Proyecto 3" />
-            </div>
-            <div class="proyecto-info">
-              <h3 class="proyecto-nombre">Mi-Veterinaria_Happy-Feets</h3>
-              <p class="proyecto-descripcion">
-                Happy Feets es una aplicación web para la gestión integral de una veterinaria, desarrollada con PHP
-                 utilizando el patrón MVC de CodeIgniter 4. Permite registrar, modificar y eliminar información sobre
-                  amos, mascotas y veterinarios, así como llevar el control de visitas veterinarias. Pensada para 
-                  facilitar el trabajo administrativo del personal.
-              </p>
-              <ul class="proyecto-tecnologias">
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>HTML / CSS</li>
-              </ul>
-              <div class="proyecto-links">
-                <a href="https://github.com/Sabry2493/Mi-Veterinaria_Happy-Feets" target="_blank" class="btn btn-secundario">
-                  Ver código en GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACTO ========== -->
-     <section id="contacto" class="seccion contacto">
-  <div class="contenedor">
-    <h2 class="seccion-titulo">¿Hablamos?</h2>
-    <p class="seccion-subtitulo">
-      Si estás buscando una desarrolladora para sumar a tu equipo,
-      me encantaría que me escribas en cualquiera de estos canales. 
-      Estoy disponible para entrevistas.
+    <p class="subtitulo">
+      Desarrolladora <span>Full Stack</span>
     </p>
 
-    <div class="contacto-cards">
-
-      <a href="mailto:sabrina@email.com" class="contacto-card">
-        <span class="contacto-card-icono">✉️</span>
-        <span class="contacto-card-label">Email</span>
-        <span class="contacto-card-valor">sabrinatolay@gmail.com</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/sabrinatolay" target="_blank" class="contacto-card">
-        <span class="contacto-card-icono">💼</span>
-        <span class="contacto-card-label">LinkedIn</span>
-        <span class="contacto-card-valor">/in/sabrinatolay</span>
-      </a>
-
-      <a href="https://github.com/sabrinatolay" target="_blank" class="contacto-card">
-        <span class="contacto-card-icono">🐙</span>
-        <span class="contacto-card-label">GitHub</span>
-        <span class="contacto-card-valor">/sabrinatolay</span>
-      </a>
-
+    <div class="separador">
+      <span class="separador-icono">◆</span>
     </div>
-  </div>
-</section>
 
+    <a href="portfolio.html" class="btn-entrar">
+      Ver portfolio
+      <span class="btn-flecha">→</span>
+    </a>
 
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="contenedor">
-      <p>&copy; 2025 Sabrina Tolay — Desarrolladora Full Stack</p>
-    </div>
-  </footer>
+  <p class="frase">
+    <em>Lógica, determinada</em> · impulsada por resolver lo que otros pasan por alto
+  </p>
 
-  <script src="main.js"></script>
 </body>
 </html>
-<!-- Describí qué hace la app, qué problema resuelve y cuál fue
-                tu rol en el desarrollo (ej: "desarrollé el módulo de login,
-                el ABM de usuarios y el diseño de la base de datos"). -->
