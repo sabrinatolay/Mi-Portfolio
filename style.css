@@ -138,7 +138,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background: #bda04f;
+  background:var(--color-acento);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-borde);
 }
@@ -504,7 +504,7 @@ header {
 }
 
 
-/* ========== CONTACTO2 ========== */
+/* ========== CONTACTO ========== */
 .contacto {
   background-color: var(--color-fondo);
 }
@@ -598,7 +598,7 @@ header {
 /* ── Navbar al hacer scroll ── */
 header.scrolled {
   /* background: rgba(13, 17, 23, 0.97); */
-  background: #bda04f;
+  background:var(--color-acento);
   box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
@@ -675,96 +675,3 @@ header.scrolled {
   }
 }
 
-/* ========== CONTACTO ========== */
-/* .contacto {
-  background-color: var(--color-fondo);
-}
-
-.contacto-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  margin-top: 3rem;
-  align-items: start;
-}
-
-.contacto-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contacto-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.contacto-icono {
-  font-size: 1.3rem;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.contacto-item a {
-  color: var(--color-texto-suave);
-  font-size: 0.95rem;
-  transition: color var(--transicion);
-}
-
-.contacto-item a:hover {
-  color: var(--color-primario);
-} */
-
-/* Formulario */
-/* .contacto-formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.form-grupo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.form-grupo label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-texto-suave);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.form-grupo input,
-.form-grupo textarea {
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio);
-  padding: 0.85rem 1rem;
-  font-family: var(--fuente-cuerpo);
-  font-size: 0.95rem;
-  color: var(--color-texto);
-  transition: border-color var(--transicion), box-shadow var(--transicion);
-  resize: vertical;
-}
-
-.form-grupo input::placeholder,
-.form-grupo textarea::placeholder {
-  color: var(--color-texto-muy-suave);
-}
-
-.form-grupo input:focus,
-.form-grupo textarea:focus {
-  outline: none;
-  border-color: var(--color-primario);
-  box-shadow: 0 0 0 3px rgba(59, 125, 216, 0.12);
-} */
