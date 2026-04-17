@@ -1,30 +1,23 @@
-/* =============================================
-   PORTFOLIO — SABRINA TOLAY
-   Estética: Profesional corporativo con
-   acento azul índigo + detalles dorados.
-   Tipografía: DM Serif Display + DM Sans
-============================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /* ========== VARIABLES ========== */
 :root {
-  --color-fondo:        #0d1117;
-  --color-fondo-alt:    #111820;
-  --color-superficie:   #161d27;
-  --color-borde:        #1e2a38;
-  --color-primario:     #3b7dd8;
-  --color-primario-hover: #5592e8;
-  --color-acento:       #c9a84c;
-  --color-texto:        #e2e8f0;
-  --color-texto-suave:  #8899aa;
-  --color-texto-muy-suave: #4a5a6a;
-  --fuente-display:     'DM Serif Display', serif;
-  --fuente-cuerpo:      'DM Sans', sans-serif;
-  --radio:              8px;
-  --sombra:             0 4px 24px rgba(0,0,0,0.4);
-  --transicion:         0.3s ease;
-  --max-ancho:          1100px;
+  --color-fondo:           #1a1917;
+  --color-fondo-alt:       #252320;
+  --color-superficie:      #2e2c29;
+  --color-borde:           #3a3835;
+  --color-primario:        #c47a8a;
+  --color-primario-hover:  #d4909f;
+  --color-acento:          #b8973a;
+  --fuente-display:        'DM Serif Display', serif;
+  --fuente-cuerpo:         'DM Sans', sans-serif;
+  --radio:                 8px;
+  --sombra:                0 4px 24px rgba(0,0,0,0.4);
+  --transicion:            0.3s ease;
+  --max-ancho:             1100px;
+  --color-texto:           #f0ede8;
+  --color-texto-suave:     #b8b2aa;
+  --color-texto-muy-suave: #6e6a65;
 }
 
 /* ========== RESET & BASE ========== */
@@ -145,7 +138,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(13, 17, 23, 0.85);
+  background: #bda04f;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-borde);
 }
@@ -178,7 +171,8 @@ header {
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--color-texto-suave);
+  /* color: var(--color-texto-suave); */
+  color: #dbd7d1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: color var(--transicion);
@@ -603,7 +597,8 @@ header {
 
 /* ── Navbar al hacer scroll ── */
 header.scrolled {
-  background: rgba(13, 17, 23, 0.97);
+  /* background: rgba(13, 17, 23, 0.97); */
+  background: #bda04f;
   box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 

@@ -1,0 +1,283 @@
+ /* ── Reset ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Variables ─────────────────────────── */
+    :root {
+      --gris-fondo:   #1a1917;
+      --gris-med:     #252320;
+      --gris-clar:    #2e2c29;
+      --rosa:         #c47a8a;
+      --rosa-suave:   #e8a0b0;
+      --dorado:       #b8973a;
+      --dorado-clar:  #d4b96a;
+      --crema:        #f0ede8;
+      --crema-suave:  #b8b2aa;
+    }
+
+    /* ── Base ──────────────────────────────── */
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--gris-fondo);
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Fondo con textura de puntos ───────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(196,122,138,0.07) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(184,151,58,0.06) 0%, transparent 50%),
+        radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px); /* Crea un círculo blanco muy pequeño (1px) casi transparente (0.03 = 3% de opacidad),el resto del espacio es transparente. */
+      background-size: 100% 100%, 100% 100%, 28px 28px;/* Esto repite ese gradiente cada 28px en x e y. */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Líneas decorativas laterales ──────── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(to right, var(--dorado) 0px, var(--dorado) 5px, transparent 5px),
+        linear-gradient(to left,  var(--rosa)   0px, var(--rosa)   5px, transparent 5px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Contenedor central ─────────────────── */
+    .splash {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ── Elemento decorativo superior ──────── */
+    .deco-top {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      color: var(--dorado);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+
+    .deco-linea {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--dorado-clar);
+    }
+
+    .deco-linea::before,
+    .deco-linea::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--dorado-clar);
+      opacity: 0.5;
+    }
+
+    /* ── Nombre ─────────────────────────────── */
+    .nombre {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--crema);
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.4s forwards;
+      position: relative;
+    }
+
+    .nombre .acento {
+      color: var(--rosa);
+      font-style: italic;
+    }
+
+    /* Sombra de texto muy sutil */
+    .nombre::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(184,151,58,0.15);
+      pointer-events: none;
+      font-style: italic;
+    }
+
+    /* ── Subtítulo ──────────────────────────── */
+    .subtitulo {
+      font-size: clamp(0.85rem, 2vw, 1.05rem);
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--crema-suave);
+      margin-top: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.6s forwards;
+    }
+
+    .subtitulo span {
+      color: var(--dorado-clar);
+    }
+
+    /* ── Separador ──────────────────────────── */
+    .separador {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.5rem 0;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+
+    .separador::before,
+    .separador::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--rosa-suave));
+    }
+
+    .separador::after {
+      background: linear-gradient(to left, transparent, var(--rosa-suave));
+    }
+
+    .separador-icono {
+      font-size: 1rem;
+      color: var(--rosa-suave);
+    }
+
+    /* ── Botón ───────────────────────────────── */
+    .btn-entrar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.9rem 2.4rem;
+      background: transparent;
+      border: 1.5px solid var(--rosa);
+      border-radius: 3px;
+      color: var(--crema);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1s forwards;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Efecto fill al hover */
+    .btn-entrar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--rosa);
+      transform: translateX(-100%);
+      transition: transform 0.35s ease;
+      z-index: -1;
+    }
+
+    .btn-entrar:hover::before {
+      transform: translateX(0);
+    }
+
+    .btn-entrar:hover {
+      color: var(--crema);
+      border-color: var(--rosa);
+    }
+
+    .btn-flecha {
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-entrar:hover .btn-flecha {
+      transform: translateX(5px);
+    }
+
+    /* ── Frase inferior ─────────────────────── */
+    .frase {
+      position: fixed;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: var(--crema-suave);
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1.3s forwards;
+      white-space: nowrap;
+    }
+
+    .frase em {
+      color: var(--dorado-clar);
+      font-style: italic;
+    }
+
+    /* ── Círculos decorativos de fondo ──────── */
+    .circulo {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .circulo-1 {
+      width: 400px; height: 400px;
+      top: -120px; right: -120px;
+      border: 1px solid rgba(196,122,138,0.08);
+    }
+
+    .circulo-2 {
+      width: 600px; height: 600px;
+      top: -200px; right: -200px;
+      border: 1px solid rgba(196,122,138,0.05);
+    }
+
+    .circulo-3 {
+      width: 300px; height: 300px;
+      bottom: -80px; left: -80px;
+      border: 1px solid rgba(184,151,58,0.07);
+    }
+
+    .circulo-4 {
+      width: 500px; height: 500px;
+      bottom: -160px; left: -160px;
+      border: 1px solid rgba(184,151,58,0.04);
+    }
+
+    /* ── Animaciones ────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ─────────────────────────── */
+    @media (max-width: 480px) {
+      .nombre::after { display: none; }
+      .separador::before,
+      .separador::after { max-width: 40px; }
+    }
